@@ -94,7 +94,7 @@ const Product = ({ product }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://mercadocarnes-backend.onrender.com/api/productid/${params.id}`);
+  const res = await axios.get(`https://mercadocarnes-backend.onrender.com/api/productid/${params.id}`);
   const product = res.data;
 
   // Asegurarse de incluir sizeNames en los datos del producto

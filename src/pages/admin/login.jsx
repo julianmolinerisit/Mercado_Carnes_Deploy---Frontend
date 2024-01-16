@@ -24,7 +24,7 @@ const Login = () => {
     }
   
     try {
-      const response = await axios.post('http://mercadocarnes-backend.onrender.com/api/user/login', {
+      const response = await axios.post('https://mercadocarnes-backend.onrender.com/api/user/login', {
         username,
         password,
       });

@@ -16,7 +16,7 @@ const NewsDetail = () => {
 
   const fetchNewsDetail = async (id) => {
     try {
-      const response = await axios.get(`http://mercadocarnes-backend.onrender.com/api/news/${id}`);
+      const response = await axios.get(`https://mercadocarnes-backend.onrender.com/api/news/${id}`);
       setNews(response.data);
     } catch (error) {
       console.error("Error fetching news detail:", error);

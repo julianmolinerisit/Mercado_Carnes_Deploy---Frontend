@@ -47,7 +47,7 @@ export const getServerSideProps = async (ctx) => {
   const myCookie = ctx.req?.cookies || {};
 
   try {
-    const res = await axios.get("http://mercadocarnes-backend.onrender.com/api/news");
+    const res = await axios.get("https://mercadocarnes-backend.onrender.com/api/news");
     return {
       props: {
         newsList: res.data,

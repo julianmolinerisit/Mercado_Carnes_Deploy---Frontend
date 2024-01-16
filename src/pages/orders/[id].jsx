@@ -114,7 +114,7 @@ const Order = ({ order }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const res = await axios.get(`http://mercadocarnes-backend.onrender.com/api/orderid/${params.id}`);
+  const res = await axios.get(`https://mercadocarnes-backend.onrender.com/api/orderid/${params.id}`);
   return {
     props: { order: res.data },
   };

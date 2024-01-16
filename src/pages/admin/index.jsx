@@ -42,7 +42,7 @@ const Index = ({ orders, products }) => {
   const handleDelete = async (id) => {
     try {
       const res = await axios.delete(
-        "http://mercadocarnes-backend.onrender.com/api/products/" + id
+        "https://mercadocarnes-backend.onrender.com/api/products/" + id
       );
       setProductList(productList.filter((product) => product._id !== id));
     } catch (err) {
@@ -52,7 +52,7 @@ const Index = ({ orders, products }) => {
 
   const handleDeleteOrder = async (id) => {
     try {
-      const response = await axios.delete(`http://mercadocarnes-backend.onrender.com/api/orders/${id}`);
+      const response = await axios.delete(`https://mercadocarnes-backend.onrender.com/api/orders/${id}`);
     
       // Verificar si la solicitud DELETE fue exitosa
       if (response.status === 200) {
@@ -76,7 +76,7 @@ const Index = ({ orders, products }) => {
     const currentStatus = item.status;
 
     try {
-      const res = await axios.put(`http://mercadocarnes-backend.onrender.com/api/orders/${id}`, {
+      const res = await axios.put(`https://mercadocarnes-backend.onrender.com/api/orders/${id}`, {
         
         status: currentStatus + 1,
       });
@@ -286,8 +286,8 @@ export const getServerSideProps = async (ctx) => {
     };
   }
 
-  const productRes = await axios.get("http://mercadocarnes-backend.onrender.com/api/products");
-  const orderRes = await axios.get("http://mercadocarnes-backend.onrender.com/api/orders");
+  const productRes = await axios.get("https://mercadocarnes-backend.onrender.com/api/products");
+  const orderRes = await axios.get("https://mercadocarnes-backend.onrender.com/api/orders");
 
   return {
     props: {

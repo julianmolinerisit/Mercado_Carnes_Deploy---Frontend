@@ -35,7 +35,7 @@ const EditProduct = ({ product, onClose, onUpdate }) => {
       };
 
       const response = await axios.put(
-        `http://mercadocarnes-backend.onrender.com/api/products/${product._id}`,
+        `https://mercadocarnes-backend.onrender.com/api/products/${product._id}`,
         updatedProduct
       );
 

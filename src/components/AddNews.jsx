@@ -68,7 +68,7 @@ const AddNews = ({ closeModal }) => {
       };
 
       // Envía la noticia al servidor (ajusta la URL y ruta según tu backend)
-      await axios.post("http://mercadocarnes-backend.onrender.com/api/news", newNews);
+      await axios.post("https://mercadocarnes-backend.onrender.com/api/news", newNews);
       console.log("Noticia agregada exitosamente");
       closeModal();
       window.location.reload();

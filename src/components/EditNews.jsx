@@ -20,7 +20,7 @@ const EditNews = ({ news, onClose }) => {
       };
 
       await axios.put(
-        `http://mercadocarnes-backend.onrender.com/api/news/${news._id}`, // Asegúrate de que news._id sea el ID correcto
+        `https://mercadocarnes-backend.onrender.com/api/news/${news._id}`, // Asegúrate de que news._id sea el ID correcto
         updatedNews
       );
 

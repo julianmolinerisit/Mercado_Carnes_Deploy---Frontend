@@ -24,7 +24,7 @@ export async function getServerSideProps(context) {
   const { id } = params;
 
   try {
-    const response = await axios.get(`http://mercadocarnes-backend.onrender.com/api/news/${id}`);
+    const response = await axios.get(`https://mercadocarnes-backend.onrender.com/api/news/${id}`);
     const news = response.data;
 
     return {
