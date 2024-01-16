@@ -40,7 +40,7 @@ const Add = ({ setClose }) => {
         img: url,
       };
 
-      await axios.post("http://mercadocarnes-backend.onrender.com/api/products", newProduct);
+      await axios.post("https://mercadocarnes-backend.onrender.com/api/products", newProduct);
       setClose(true);
       window.location.reload();
     } catch (err) {
